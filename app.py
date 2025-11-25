@@ -149,7 +149,7 @@ def create_combined_dataframe(df_global_annual, df_emissions, df_methane, df_n2o
                 how='left'
             )
         
-        df_combined = df_combined.fillna(method='ffill')
+        df_combined = df_combined.ffill()
         
         return df_combined
     except Exception as e:
